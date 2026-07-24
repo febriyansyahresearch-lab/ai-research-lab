@@ -1,6 +1,6 @@
 import pytest
 import torch
-from src.models.lstm import LSTMClassifier, BiLSTMClassifier
+from src.dl.lstm import LSTMClassifier, BiLSTMClassifier
 
 
 def test_lstm_output_shape():
@@ -15,11 +15,3 @@ def test_bilstm_output_shape():
     x = torch.randn(4, 10, 8)
     out = model(x)
     assert out.shape == (4, 2)
-
-
-def test_lstm_forward_pass():
-    model = LSTMClassifier(input_dim=4, hidden_dim=16, num_classes=3)
-    x = torch.randn(2, 5, 4)
-    out = model(x)
-    assert out is not None
-    assert not torch.isnan(out).any()

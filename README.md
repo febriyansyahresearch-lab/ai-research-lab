@@ -1,22 +1,19 @@
-# Deep Learning Lab
+# AI Research Lab
 
-Deep learning experiments focused on cybersecurity and finance applications.
+Comprehensive AI/ML research lab covering Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, and Autonomous Systems.
 
-## Arsitektur
+## Structure
 
 ```
 src/
-├── models/
-│   ├── cnn.py          # 1D CNN (time series) & 2D CNN (images)
-│   ├── lstm.py         # LSTM & BiLSTM (sequence classification)
-│   └── transformer.py  # Transformer Encoder (text classification)
-├── utils/
-│   └── data_loader.py  # Dataset & synthetic data generators
-notebooks/
-├── cnn-mnist-classification.ipynb
-├── lstm-anomaly-detection.ipynb
-└── transformer-text-classification.ipynb
-tests/                  # 10 unit tests
+├── core/          AI: search algorithms (BFS, DFS, A*), agents
+├── ml/            ML: linear regression, logistic regression, decision tree, k-means (from scratch)
+├── dl/            Deep Learning: CNN, LSTM, Transformer (PyTorch)
+├── cv/            Computer Vision: object detection, image segmentation
+├── autonomous/    Autonomous: path planning (A*, Dijkstra), Q-learning RL agent
+└── utils/         Data loaders & generators
+notebooks/         Jupyter notebooks for each area
+tests/             25+ unit tests
 ```
 
 ## Setup
@@ -30,12 +27,6 @@ pip install -r requirements.txt
 ```bash
 pytest tests/ -v
 ```
-
-## Notebooks
-
-- **CNN** — MNIST digit classification
-- **LSTM** — Anomaly detection on synthetic logs
-- **Transformer** — Sentiment text classification
 
 ## Author
 

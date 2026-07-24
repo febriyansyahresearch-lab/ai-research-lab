@@ -1,31 +1,19 @@
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
 dist/
 build/
-
-# Jupyter
 .ipynb_checkpoints/
 *.ipynb_metadata/
-
-# Data
-*.csv
 *.h5
 *.hdf5
 *.pth
 *.pt
 *.ckpt
 checkpoints/
-data/
-models/
-
-# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
 .DS_Store
 Thumbs.db
