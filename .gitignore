@@ -4,13 +4,11 @@ __pycache__/
 dist/
 build/
 .ipynb_checkpoints/
-*.ipynb_metadata/
-*.h5
-*.hdf5
 *.pth
 *.pt
 *.ckpt
 checkpoints/
+models/
 .vscode/
 .idea/
 *.swp

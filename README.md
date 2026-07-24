@@ -1,33 +1,29 @@
 # AI Research Lab
 
-Comprehensive AI/ML research lab covering Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, and Autonomous Systems.
+AI/ML/DL/CV projects focused on cybersecurity and malware analysis.
 
-## Structure
+## Projects
 
-```
-src/
-├── core/          AI: search algorithms (BFS, DFS, A*), agents
-├── ml/            ML: linear regression, logistic regression, decision tree, k-means (from scratch)
-├── dl/            Deep Learning: CNN, LSTM, Transformer (PyTorch)
-├── cv/            Computer Vision: object detection, image segmentation
-├── autonomous/    Autonomous: path planning (A*, Dijkstra), Q-learning RL agent
-└── utils/         Data loaders & generators
-notebooks/         Jupyter notebooks for each area
-tests/             25+ unit tests
-```
+| Project | Area | Description |
+|---|---|---|
+| `malware_ml/` | ML | Malware detection via feature engineering (entropy, PE sections, API calls) |
+| `malware_vision/` | CV | Malware binary-to-image conversion + CNN family classification |
+| `intrusion_dl/` | DL | Network intrusion detection with LSTM on traffic sequences |
+| `threat_ai/` | AI | Attack graph analysis, threat inference engine, IOC correlation |
+| `auto_response/` | RL | Autonomous incident response with Q-Learning agent |
 
 ## Setup
 
 ```bash
 pip install -r requirements.txt
+python -m malware_ml.src.train
+python -m malware_vision.src.train
+python -m intrusion_dl.src.train
+python -m auto_response.src.train
 ```
 
 ## Test
 
 ```bash
-pytest tests/ -v
+pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ -v
 ```
-
-## Author
-
-Febriyansyah — febriyansyah.research@gmail.com
