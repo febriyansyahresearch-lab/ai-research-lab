@@ -4,4 +4,6 @@ torchvision
 scikit-learn
 joblib
 sentence-transformers
+google-generativeai
+deep-translator
 pytest

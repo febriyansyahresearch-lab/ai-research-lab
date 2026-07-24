@@ -25,4 +25,4 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ -v
+          python -m pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ live_translate/tests/ -v

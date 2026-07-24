@@ -3,11 +3,11 @@
 [![CI](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-33%20passed-brightgreen)](.)
+[![Tests](https://img.shields.io/badge/tests-52%20passed-brightgreen)](.)
 
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
-Academic research and practical experimentation at the intersection of **Artificial Intelligence** and **Cybersecurity**. This repository demonstrates MTI-level competency across six core areas: Machine Learning, Computer Vision, Deep Learning, AI Reasoning, Reinforcement Learning, and Retrieval-Augmented Generation — all applied to real-world security problems.
+Academic research and practical experimentation at the intersection of **Artificial Intelligence** and **Cybersecurity**. This repository demonstrates MTI-level competency across seven core areas: Machine Learning, Computer Vision, Deep Learning, AI Reasoning, Reinforcement Learning, Retrieval-Augmented Generation, and Neural Machine Translation — all applied to real-world security problems.
 
 ## Research Areas & Projects
 
@@ -66,6 +66,17 @@ Retrieval-Augmented Generation for knowledge-grounded Q&A:
 
 **References:** Lewis et al. (2020), "RAG"; Reimers & Gurevych (2019), "Sentence-BERT"
 
+### 7. Live Translate — NMT (`live_translate/`)
+Multi-provider neural machine translation pipeline:
+- Abstract provider interface with Factory pattern
+- Gemini AI translation via `google-generativeai` SDK
+- Google Translate via `deep-translator` (free, no API key)
+- Mock provider for testing and offline development
+- Automatic fallback pipeline (primary → fallback)
+- Interactive CLI live translation mode
+
+**References:** Vaswani et al. (2017), "Attention Is All You Need"; Google Gemini API
+
 ## Repository Structure
 
 ```
@@ -76,6 +87,7 @@ ai-research-lab/
 ├── threat_ai/          AI: attack graph & threat inference
 ├── auto_response/      RL: Q-Learning incident response
 ├── rag_chatbot/         RAG: retrieval-augmented generation chatbot
+├── live_translate/      NMT: multi-provider translation pipeline
 └── references/         Academic references & methodology notes
 ```
 
@@ -89,6 +101,7 @@ ai-research-lab/
 | AI | Pure Python | Graph search, rule engine, IOC |
 | RL | Pure Python | Q-Learning, Markov decision process |
 | RAG | sentence-transformers, numpy | Dense retrieval, cosine similarity, chunking |
+| NMT | google-generativeai, deep-translator | Provider abstraction, fallback pipeline, prompt engineering |
 
 ## Setup & Validation
 
@@ -102,7 +115,7 @@ python -m intrusion_dl.src.train
 python -m auto_response.src.train
 
 # Run all tests
-pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ -v
+pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ live_translate/tests/ -v
 ```
 
 ## About the Author
