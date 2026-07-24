@@ -1,5 +1,10 @@
 # AI Research Lab
 
+[![CI](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-18%20passed-brightgreen)](.)
+
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
 Academic research and practical experimentation at the intersection of **Artificial Intelligence** and **Cybersecurity**. This repository demonstrates MTI-level competency across five core areas: Machine Learning, Computer Vision, Deep Learning, AI Reasoning, and Reinforcement Learning — all applied to real-world security problems.
