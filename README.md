@@ -3,11 +3,11 @@
 [![CI](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-18%20passed-brightgreen)](.)
+[![Tests](https://img.shields.io/badge/tests-33%20passed-brightgreen)](.)
 
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
-Academic research and practical experimentation at the intersection of **Artificial Intelligence** and **Cybersecurity**. This repository demonstrates MTI-level competency across five core areas: Machine Learning, Computer Vision, Deep Learning, AI Reasoning, and Reinforcement Learning — all applied to real-world security problems.
+Academic research and practical experimentation at the intersection of **Artificial Intelligence** and **Cybersecurity**. This repository demonstrates MTI-level competency across six core areas: Machine Learning, Computer Vision, Deep Learning, AI Reasoning, Reinforcement Learning, and Retrieval-Augmented Generation — all applied to real-world security problems.
 
 ## Research Areas & Projects
 
@@ -56,6 +56,16 @@ Reinforcement learning for SOAR:
 
 **References:** Sutton & Barto (2018), "Reinforcement Learning"; SOAR frameworks (Splunk Phantom, Palo Alto XSOAR)
 
+### 6. RAG Chatbot — RAG (`rag_chatbot/`)
+Retrieval-Augmented Generation for knowledge-grounded Q&A:
+- Document ingestion with sentence-boundary chunking (500-char, 50-char overlap)
+- Dense embedding using Sentence-BERT (all-MiniLM-L6-v2)
+- Numpy-based vector store with cosine similarity search
+- Retrieval pipeline with configurable top-k
+- Template-based response generation from retrieved context
+
+**References:** Lewis et al. (2020), "RAG"; Reimers & Gurevych (2019), "Sentence-BERT"
+
 ## Repository Structure
 
 ```
@@ -65,6 +75,7 @@ ai-research-lab/
 ├── intrusion_dl/       DL: LSTM network intrusion detection
 ├── threat_ai/          AI: attack graph & threat inference
 ├── auto_response/      RL: Q-Learning incident response
+├── rag_chatbot/         RAG: retrieval-augmented generation chatbot
 └── references/         Academic references & methodology notes
 ```
 
@@ -77,6 +88,7 @@ ai-research-lab/
 | DL | PyTorch | LSTM, sequence classification |
 | AI | Pure Python | Graph search, rule engine, IOC |
 | RL | Pure Python | Q-Learning, Markov decision process |
+| RAG | sentence-transformers, numpy | Dense retrieval, cosine similarity, chunking |
 
 ## Setup & Validation
 
@@ -90,7 +102,7 @@ python -m intrusion_dl.src.train
 python -m auto_response.src.train
 
 # Run all tests
-pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ -v
+pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ -v
 ```
 
 ## About the Author

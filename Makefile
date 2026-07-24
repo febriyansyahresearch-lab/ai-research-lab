@@ -4,7 +4,7 @@ setup:
 	pip install -r requirements.txt
 
 test:
-	pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ -v
+	pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ -v
 
 train-all:
 	python -m malware_ml.src.train
