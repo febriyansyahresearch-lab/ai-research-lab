@@ -3,7 +3,7 @@
 [![CI](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/ai-research-lab/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-52%20passed-brightgreen)](.)
+[![Tests](https://img.shields.io/badge/tests-60%20passed-brightgreen)](.)
 
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
@@ -117,6 +117,21 @@ python -m auto_response.src.train
 # Run all tests
 pytest malware_ml/tests/ malware_vision/tests/ intrusion_dl/tests/ threat_ai/tests/ auto_response/tests/ rag_chatbot/tests/ live_translate/tests/ -v
 ```
+
+Example validation output:
+
+```text
+60 passed
+```
+
+## Quick Demo
+
+| Area | Command | Expected result |
+|---|---|---|
+| Malware ML | `python -m malware_ml.src.train` | Trains a feature-based malware classifier |
+| Intrusion DL | `python -m intrusion_dl.src.train` | Trains an LSTM traffic classifier |
+| RL Response | `python -m auto_response.src.train` | Learns an incident response policy |
+| RAG Chatbot | `pytest rag_chatbot/tests/ -q` | Validates ingest, retrieval, and response generation |
 
 ## About the Author
 
